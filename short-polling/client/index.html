@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>client</title>
+</head>
+<body>
+<div id="app"></div>
+</body>
+<script>
+    const fetchData= ()=>{
+        fetch('http://localhost:3000/api/problems').then(res=>res.json()).then((data)=>{console.log(data)})
+    }
+
+    setInterval(()=>{
+        fetchData()
+    }, 2000)
+</script>
+</html>
