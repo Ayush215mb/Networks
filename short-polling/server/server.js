@@ -20,19 +20,7 @@ let problems = [
     }
 ];
 
-
 app.get('/api/problems', (req, res) => {
-    res.json(problems);
-})
-
-app.post('/api/problems', (req, res) => {
-    const body = req.body;
-
-    problems=[
-        ...problems,
-        body
-    ]
-
     res.json(problems);
 })
 
